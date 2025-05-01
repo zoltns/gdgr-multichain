@@ -19,12 +19,13 @@
   "homepage": "https://github.com/zoltns/gdgr-multichain#readme",
   "dependencies": {
     "axios": "^1.9.0",
-    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "telegraf": "^4.16.3"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.5.0",
     "hardhat": "^2.23.0"
   }
 }
