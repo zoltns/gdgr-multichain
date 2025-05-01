@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+.env
+.env.enc
+dist/
+build/
+npm-debug.log*
+
+# Hardhat artifacts
+artifacts/
+cache/
+typechain/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

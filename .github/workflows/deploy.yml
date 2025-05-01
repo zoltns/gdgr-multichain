@@ -1,0 +1,30 @@
+name: Deploy GDGR Multichain
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout код
+        uses: actions/checkout@v3
+
+      - name: Установка Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Установка зависимостей
+        run: npm install
+
+      - name: Деплой контрактов (Arbitrum)
+        run: npx hardhat run scripts/deploy.js --network arbitrum
+        env:
+          RPC_URL: ${{ secrets.RPC_URL }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          CHAINLINK_GOLD_PRICE_FEED: ${{ secrets.CHAINLINK_GOLD_PRICE_FEED }}
+s
